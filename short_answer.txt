@@ -2,14 +2,14 @@
 
 Your answer:
 
-
+rm is used to remove files or directories
 ------------------
 2) What terminal command would you use to list all the files and folder in the 
    current directory?
 
 Your answer:
 
-
+ls
 ------------------
 3) Explain the difference between these two commands in the terminal:
    
@@ -18,19 +18,20 @@ Your answer:
 
 Your answer:
 
-
+   $ cd Users: this takes you to the Users folder in the directory you're currently. this can only work if there is an existing folder called "Users" in the current directory.
+   $ cd /Users: this is on the other hand is an absolute path that directly navigates to the "Users" directory at the root level of the file system.
 ------------------
 4) Describe what git is and what it is used for.
 
 Your answer:
 
-
+this is a tool to help backup files, codes, etc locally on one's computer.
 ------------------
 5) Describe what GitHub is and what it is used for.
 
 Your answer:
 
-
+this is a web based platform/portal to save and store files, codes, etc online.
 ------------------
 6) Which of these commands sets up a new git repository?
     a) git clone 
@@ -39,7 +40,7 @@ Your answer:
     d) git status
 
 Your answer:
-
+C
 ------------------
 7) You want to check that you have properly added all the files you want to be
    tracked in git BEFORE you make a commit. Which command will do this?
@@ -50,22 +51,23 @@ Your answer:
 
 Your answer:
 
-
+C
 ------------------
 8) What is the difference between `git add` and `git commit`?
 
 Your answer:
 
-
+git add basically tells git to start tracking changes that are being made. git commit more like raises a ticket to 
+record and upload the changes as a file with a comment.
 ------------------
 9) What does the `git push` command do?
 
 Your answer:
 
-
+this is used to transfer committed changes from your local branch to the corresponding branch on the remote repository (e.g.GitHub).
 ------------------
 10) When would you use the `git clone` command?
 
 Your answer:
 
-
+this is used to create a copy of a remote git repository (e.g. GitHub) on one's local machine.

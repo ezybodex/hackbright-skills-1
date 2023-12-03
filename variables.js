@@ -1,17 +1,17 @@
 //////////////////PROBLEM 1////////////////////
 /* Create a variable called 'myName' with a value that is your name as a string. */
 
-//CODE HERE 
+// let myName = "Olabode";
 
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
-//CODE HERE
+// let faveNum = 7;
 
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
 
-//CODE HERE
+// let lovesCode = True;
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -20,11 +20,20 @@
   If it's not, console.log('not lucky 13').
 */
 
-//CODE HERE
+// let faveNum = 7;
+// if (faveNum === 13) {
+//   console.log('lucky 13!');
+// } else {
+//   console.log('not lucky 13')
+// }
+
+
 
 //////////////////PROBLEM 5////////////////////
 /*
   Write a for loop that prints out the numbers from 1 through 5.
 */
 
-//CODE HERE
+// for (let i = 1; i <= 5; i +=1) {
+//   console.log(i);
+// }

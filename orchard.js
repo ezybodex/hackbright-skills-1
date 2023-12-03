@@ -33,7 +33,13 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
     Log `totalAcres` to the console.
 */
 
-// CODE HERE
+let totalAcres = 0; // to get totalAcres, I need to set this to 0 and add total for all categories to it.
+
+for (let i = 0; i < fujiAcres.length; i++) {
+  totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i];
+}
+
+// console.log('Total Acres Picked: ', totalAcres);
 
 
 
@@ -50,7 +56,8 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
     `averageDailyAcres`, and log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+const averageDailyAcres = totalAcres/7 // since there are 7days in a week, simply dividing total acres by 7 to get the average per day
+// console.log('Average number of acres per day:', averageDailyAcres)
 
 
 
@@ -81,7 +88,15 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+const dailyAverage =  9
+
+// -= reduces the number of acres left
+while (acresLeft > 0) {
+  days += 1;
+  acresLeft -= dailyAverage;
+}
+
+// console.log('Number of Days Needed: ', days);
 
 
 
@@ -102,12 +117,22 @@ let days = 0
     add that number into the new list)
 */
 
-// CODE HERE
 
 let fujiTons = [];
 let galaTons = [];
 let pinkTons = [];
+const tonsPerAcre = 6.5;
 
+// here, I would pick each item on the arrays for each category and multiply by the value of tons per acre which is 6.5
+for (let i = 0; i < fujiAcres.length; i++) {
+  fujiTons.push(fujiAcres[i] * tonsPerAcre); 
+  galaTons.push(galaAcres[i] * tonsPerAcre);
+  pinkTons.push(pinkAcres[i] * tonsPerAcre);
+}
+
+// console.log('Daily Fuji Apple Quantity in Tons:', fujiTons);
+// console.log('Daily Gala Apple Quanity in Tons:', galaTons);
+// console.log('Daily Pink Apple Quantity in Tons:', pinkTons);
 
 
 // PROBLEM 5
@@ -123,7 +148,19 @@ let pinkTons = [];
     Hint: there are 2000 pounds in a ton.
 */
 
-// CODE HERE 
+let totalFujiPounds;
+let totalGalaPounds;
+let totalPinkPounds;
+const poundsPerTon = 2000;
+
+// To calculate the total pounds for each variety
+totalFujiPounds = fujiTons.reduce((total, tons) => total + tons, 0) * poundsPerTon;
+totalGalaPounds = galaTons.reduce((total, tons) => total + tons, 0) * poundsPerTon;
+totalPinkPounds = pinkTons.reduce((total, tons) => total + tons, 0) * poundsPerTon;
+
+// console.log('Total Fuji Pounds:', totalFujiPounds);
+// console.log('Total Gala Pounds:', totalGalaPounds);
+// console.log('Total Pink Pounds:', totalPinkPounds);
 
 
 
@@ -141,12 +178,15 @@ const fujiPrice = .89
 const galaPrice = .64
 const pinkPrice = .55
 
-// CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+// To calculate profits for each variety
+let fujiProfit = totalFujiPounds * fujiPrice / 100; // Since there are 100cents in a dollar, this helps convert price from cents to dollars
+let galaProfit = totalGalaPounds * galaPrice / 100;
+let pinkProfit = totalPinkPounds * pinkPrice / 100;
 
+// console.log('Fuji Profit:', fujiProfit);
+// console.log('Gala Profit:', galaProfit);
+// console.log('Pink Profit:', pinkProfit);
 
 
 
@@ -159,4 +199,5 @@ const pinkPrice = .55
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log('Total Profit is:', totalProfit.toFixed(2)) // toFixed(2) makes totalProfit 2 decimal places - https://stackoverflow.com/questions/67277547/how-to-make-2-decimals-place-in-javascript 
